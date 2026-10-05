@@ -19,7 +19,7 @@
 
 
 const BIRTHDAY_MONTH = 9; // September = 8(javascript start month from 0 )
-const BIRTHDAY_DAY = 5;
+const BIRTHDAY_DAY = 7;
 
 
 /*
