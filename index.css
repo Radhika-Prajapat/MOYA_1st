@@ -1,0 +1,349 @@
+/* =========================
+   BIRTHDAY STICKERS
+========================= */
+
+.password-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-stickers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+/* Birthday active hone par */
+
+.birthday-active .birthday-stickers {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* All stickers */
+
+.birthday-stickers .sticker {
+    position: absolute;
+    font-size: 45px;
+    animation: stickerFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6));
+}
+
+/* Different sizes */
+
+.sticker:nth-child(3n) {
+    font-size: 50px;
+}
+
+.sticker:nth-child(4n) {
+    font-size: 30px;
+}
+
+.sticker:nth-child(5n) {
+    font-size: 44px;
+}
+
+
+/* =========================
+   STICKER POSITIONS
+========================= */
+
+.sticker9 {
+    top: 3%;
+    left: 4%;
+}
+
+.sticker10 {
+    top: 7%;
+    right: 5%;
+    animation-delay: .4s;
+}
+
+.sticker11 {
+    top: 22%;
+    left: 2%;
+    animation-delay: .8s;
+}
+
+.sticker12 {
+    top: 28%;
+    right: 4%;
+    animation-delay: 1.2s;
+}
+
+.sticker13 {
+    top: 42%;
+    left: 5%;
+    animation-delay: .6s;
+}
+
+.sticker14 {
+    top: 45%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.sticker15 {
+    top: 58%;
+    left: 3%;
+    animation-delay: .3s;
+}
+
+.sticker16 {
+    top: 62%;
+    right: 3%;
+    animation-delay: 1s;
+}
+
+.sticker17 {
+    bottom: 20%;
+    left: 7%;
+    animation-delay: 1.7s;
+}
+
+.sticker18 {
+    bottom: 18%;
+    right: 6%;
+    animation-delay: .7s;
+}
+
+.sticker19 {
+    bottom: 8%;
+    left: 20%;
+    animation-delay: 1.4s;
+}
+
+.sticker20 {
+    bottom: 10%;
+    right: 20%;
+    animation-delay: .5s;
+}
+
+.sticker21 {
+    top: 15%;
+    left: 22%;
+    animation-delay: 2s;
+}
+
+.sticker22 {
+    top: 17%;
+    right: 22%;
+    animation-delay: 1.1s;
+}
+
+.sticker23 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: .9s;
+}
+
+.sticker24 {
+    bottom: 32%;
+    right: 20%;
+    animation-delay: 1.8s;
+}
+
+.sticker25 {
+    top: 70%;
+    left: 28%;
+    animation-delay: .2s;
+}
+
+.sticker26 {
+    top: 72%;
+    right: 28%;
+    animation-delay: 1.3s;
+}
+
+.sticker27 {
+    top: 35%;
+    left: 48%;
+    animation-delay: 2.2s;
+}
+
+
+/* =========================
+   FLOATING ANIMATION
+========================= */
+
+@keyframes stickerFloat {
+
+    0% {
+        transform: translateY(0) rotate(-10deg);
+    }
+     25% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+}
+
+
+/* Keep main box content above stickers */
+
+.password-box > *:not(.birthday-stickers) {
+    position: relative;
+    z-index: 2;
+}
+
+.floating-cartoons {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.birthday-active .floating-cartoons {
+    opacity: 1;
+}
+
+.floating-cartoon {
+    position: absolute;
+
+    object-fit: contain;
+
+    animation:
+        cartoonFloat
+        8s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 105, 180, 0.5));
+}
+
+@keyframes cartoonFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-10deg);
+    }
+
+    50% {
+        transform:
+            translateY(-40px)
+            rotate(10deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-10deg);
+    }
+}
+
+/* =========================
+   FLOATING WATER BUBBLES
+========================= */
+
+.bubble-container {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Birthday ke time bubbles show */
+
+.birthday-active .bubble-container {
+    opacity: 1;
+}
+
+
+/* Individual bubble */
+
+.bubble {
+    position: absolute;
+
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.55);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.12) 35%,
+            rgba(255, 255, 255, 0.05) 70%,
+            transparent
+        );
+
+    box-shadow:
+        inset 5px 5px 10px rgba(255, 255, 255, 0.4),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.08),
+        0 0 12px rgba(255, 255, 255, 0.25);
+
+    animation: bubbleFloat linear infinite;
+}
+
+
+/* Bubble movement */
+
+@keyframes bubbleFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        transform:
+            translateY(-50vh)
+            translateX(30px)
+            scale(1);
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            translateX(-40px)
+            scale(1.1);
+
+        opacity: 0;
+    }
+}

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACKGROUND MUSIC
+    ========================== -->
+
+    <audio id="bgMusic" loop>
+
+        <source src="birthday.mpeg"
+                type="audio/mpeg">
+
+    </audio>
+
+
+    <!-- =========================
+         MUSIC PLAYER
+    ========================== -->
+
+    <div class="music-player">
+
+        <div class="sparkContainer"
+             id="sparkContainer">
+        </div>
+
+
+        <button
+            class="music-btn"
+            onclick="toggleMusic()"
+            id="musicButton">
+
+            ▶️
+
+        </button>
+
+
+        <div class="music-info">
+
+            <span id="musicStatus">
+
+                Music Off
+
+            </span>
+
+
+            <small>
+
+                For Horrible ❤️
+
+            </small>
+
+        </div>
+
+
+        <div
+            class="music-bars"
+            id="musicBars">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================== -->
+
+    <div class="page">
+
+
+        <!-- BACK BUTTON -->
+
+        <a href="home.html"
+           class="back">
+
+            ← Back
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <h1>
+
+            Our Story 📖
+
+        </h1>
+
+
+        <p class="subtitle">
+
+            Every beautiful story has a beginning...
+
+        </p>
+
+
+
+        <!-- =========================
+             DIARY BOOK
+        ========================== -->
+
+        <div
+            class="diary-book"
+            id="diaryBook">
+
+
+            <!-- =====================
+                 LEFT PAGE
+            ====================== -->
+
+            <div class="diary-left">
+
+
+                <div class="diary-holes">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+
+                <div class="diary-paper">
+
+
+                    <!-- LEFT TITLE -->
+
+                    <div
+                        class="date"
+                        contenteditable="true"
+                        data-field="leftTitle">
+
+                        Our Memories ❤️
+
+                    </div>
+
+
+                    <div class="line-decoration">
+                    </div>
+
+
+                    <!-- LEFT TEXT -->
+
+                    <div
+                        class="left-text"
+                        contenteditable="true"
+                        data-field="leftText"
+                        style="color: rgb(97, 95, 95);">
+
+                        Every moment with you became a beautiful memory...
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+          <!-- =====================
+     RIGHT PAGE
+====================== -->
+
+<div class="diary-right">
+
+    <div class="diary-paper">
+
+        <!-- RIGHT PAGE TITLE -->
+
+        <div
+            class="date"
+            id="storyText"
+            contenteditable="true">
+
+            Dear Horrible... 💌
+
+        </div>
+
+
+        <div class="line-decoration"></div>
+
+
+        <!-- RIGHT PAGE TEXT -->
+
+        <div
+            class="right-text"
+            id="rightText"
+            contenteditable="true">
+
+            Every moment with you became a beautiful memory...
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+
+
+        <!-- =========================
+             DIARY NAVIGATION
+        ========================== -->
+
+        <div class="diary-side-controls">
+
+
+            <!-- PAGE NUMBER -->
+
+            <div class="diary-page-number">
+
+                <span id="pageNumber">
+
+                    Page 1 / 1
+
+                </span>
+
+            </div>
+
+
+
+            <!-- PREVIOUS -->
+
+            <button
+                class="diary-arrow diary-prev"
+                id="prevPage"
+                onclick="previousPage()"
+                aria-label="Previous Page">
+
+                ◀
+
+            </button>
+
+
+
+            <!-- NEXT -->
+
+            <button
+                class="diary-arrow diary-next"
+                id="nextPage"
+                onclick="nextPage()"
+                aria-label="Next Page">
+
+                ▶
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             ADD NEW PAGE
+        ========================== -->
+
+        <button
+            class="add-page-btn"
+            onclick="addNewPage()">
+
+            ＋❤️
+
+        </button>
+
+
+
+        <!-- SWIPE HINT -->
+
+        <p class="swipe-hint">
+
+        </p>
+
+        
+
+
+    </div>
+
+
+
+    <!-- =========================
+         DIARY JAVASCRIPT
+    ========================== -->
+
+
+        <script>
+
+/* =========================
+   CURRENT PAGE
+========================= */
+
+let savedPage =
+    parseInt(
+        localStorage.getItem("moyaCurrentPage")
+    );
+
+let currentPage =
+    Number.isInteger(savedPage) && savedPage >= 0
+        ? savedPage
+        : 0;
+
+
+/* =========================
+   LOAD SAVED DIARY
+========================= */
+
+let diaryPages =
+    JSON.parse(
+        localStorage.getItem("moyaDiaryPages")
+    ) || [
+
+        {
+            title: "Dear Horrible... 💌",
+
+            text: "Start writing our story here... ❤️",
+
+            leftTitle: "Our Memories ❤️",
+
+            leftText:
+                "Every moment with you became a beautiful memory...",
+
+            rightText:
+                "Every moment with you became a beautiful memory..."
+        }
+
+    ];
+
+
+/* =========================
+   SAFETY CHECK
+========================= */
+
+if (currentPage >= diaryPages.length) {
+
+    currentPage =
+        diaryPages.length - 1;
+
+}
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const storyElement =
+    document.getElementById("storyText");
+
+
+const leftTitleElement =
+    document.querySelector(
+        '[data-field="leftTitle"]'
+    );
+
+
+const leftTextElement =
+    document.querySelector(
+        '[data-field="leftText"]'
+    );
+
+const rightTextElement =
+    document.getElementById("rightText");
+
+
+/* =========================
+   SAVE DIARY
+========================= */
+
+function saveDiary() {
+
+    diaryPages[currentPage].text =
+        storyElement.innerHTML;
+
+
+    diaryPages[currentPage].leftTitle =
+        leftTitleElement.innerHTML;
+
+
+    diaryPages[currentPage].leftText =
+        leftTextElement.innerHTML;
+
+    diaryPages[currentPage].rightText =
+        rightTextElement.innerHTML;
+
+
+    localStorage.setItem(
+        "moyaDiaryPages",
+        JSON.stringify(diaryPages)
+    );
+
+
+    /* SAVE CURRENT PAGE */
+
+    localStorage.setItem(
+        "moyaCurrentPage",
+        currentPage
+    );
+
+}
+
+
+/* =========================
+   LOAD CURRENT PAGE
+========================= */
+
+function loadPage() {
+
+    const page =
+        diaryPages[currentPage];
+
+
+    storyElement.innerHTML =
+        page.text || "";
+
+
+    leftTitleElement.innerHTML =
+        page.leftTitle || "";
+
+
+    leftTextElement.innerHTML =
+        page.leftText || "";
+
+    rightTextElement.innerHTML =
+        page.rightText || "";
+
+
+    /* SAVE PAGE NUMBER */
+
+    localStorage.setItem(
+        "moyaCurrentPage",
+        currentPage
+    );
+
+
+    /* PAGE NUMBER */
+
+    document.getElementById(
+        "pageNumber"
+    ).innerText =
+
+        "Page " +
+        (currentPage + 1) +
+        " / " +
+        diaryPages.length;
+
+
+    /* PREVIOUS BUTTON */
+
+    document.getElementById(
+        "prevPage"
+    ).disabled =
+
+        currentPage === 0;
+
+
+    /* NEXT BUTTON */
+
+    document.getElementById(
+        "nextPage"
+    ).disabled =
+
+        currentPage ===
+        diaryPages.length - 1;
+
+}
+
+
+/* =========================
+   AUTO SAVE
+========================= */
+
+storyElement.addEventListener(
+    "input",
+    saveDiary
+);
+
+
+leftTitleElement.addEventListener(
+    "input",
+    saveDiary
+);
+
+
+leftTextElement.addEventListener(
+    "input",
+    saveDiary
+);
+
+rightTextElement.addEventListener(
+    "input",
+    saveDiary
+);
+
+
+/* =========================
+   NEXT PAGE
+========================= */
+
+function nextPage() {
+
+    saveDiary();
+
+
+    if (
+        currentPage <
+        diaryPages.length - 1
+    ) {
+
+        currentPage++;
+
+        loadPage();
+
+    }
+
+}
+
+
+/* =========================
+   PREVIOUS PAGE
+========================= */
+
+function previousPage() {
+
+    saveDiary();
+
+
+    if (currentPage > 0) {
+
+        currentPage--;
+
+        loadPage();
+
+    }
+
+}
+
+
+/* =========================
+   ADD NEW PAGE
+========================= */
+
+function addNewPage() {
+
+    saveDiary();
+
+
+    diaryPages.push({
+
+        title:
+            "Dear Horrible... 💌",
+
+        text:
+            "",
+
+        leftTitle:
+            "Our Memories ❤️",
+
+        leftText:
+            "",
+
+        rightText:
+            ""
+
+    });
+
+
+    currentPage =
+        diaryPages.length - 1;
+
+
+    localStorage.setItem(
+        "moyaDiaryPages",
+        JSON.stringify(diaryPages)
+    );
+
+
+    localStorage.setItem(
+        "moyaCurrentPage",
+        currentPage
+    );
+
+
+    loadPage();
+
+}
+
+
+/* =========================
+   SWIPE
+========================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+document.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        handleSwipe();
+
+    }
+);
+
+
+function handleSwipe() {
+
+    const difference =
+        touchStartX - touchEndX;
+
+
+    if (
+        Math.abs(difference) < 60
+    ) {
+
+        return;
+
+    }
+
+
+    if (difference > 0) {
+
+        nextPage();
+
+    }
+
+    else {
+
+        previousPage();
+
+    }
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadPage();
+
+</script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

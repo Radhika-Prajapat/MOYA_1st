@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories 📸</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+
+</head>
+
+
+<body class="memory-body">
+
+
+    <!-- =========================
+         BACKGROUND MUSIC
+    ========================== -->
+
+    <audio id="bgMusic" loop>
+        <source src="birthday.mpeg" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         MUSIC PLAYER
+    ========================== -->
+
+    <div class="music-player">
+
+        <div class="sparkContainer"
+             id="sparkContainer">
+        </div>
+
+        <button
+            class="music-btn"
+            onclick="toggleMusic()"
+            id="musicButton">
+
+            ▶️
+
+        </button>
+
+
+        <div class="music-info">
+
+            <span id="musicStatus">
+                Music Off
+            </span>
+
+            <small>
+                For Horrible ❤️
+            </small>
+
+        </div>
+
+
+        <div
+            class="music-bars"
+            id="musicBars">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BUTTERFLY BACKGROUND
+    ========================== -->
+
+    <div
+        class="butterfly-container"
+        id="butterflyContainer">
+
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+        <span>🦋</span>
+
+    </div>
+
+
+
+    <!-- =========================
+         CINEMATIC MEMORY
+    ========================== -->
+
+    <main class="cinematic-page">
+
+
+        <!-- BACK BUTTON -->
+
+        <a href="home.html"
+           class="back">
+
+            ← Back
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <div class="cinematic-heading">
+
+            <p>
+                OUR STORY
+            </p>
+
+            <h1>
+                Our Memories ❤️
+            </h1>
+
+            <span>
+                Moments that deserve to stay forever
+            </span>
+
+        </div>
+
+
+
+        <!-- =========================
+             MEDIA AREA
+        ========================== -->
+
+        <section class="memory-stage">
+
+
+            
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="memory-media active">
+
+                <img
+                    src="hm1.jpeg"
+                    alt="Our first memory">
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 01
+                    </small>
+
+                    <h2>
+                        Our first memory ❤️
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="memory-media">
+
+                <img
+                    src="hm2.jpeg"
+                    alt="Favourite moment">
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 02
+                    </small>
+
+                    <h2>
+                        One of my favourite moments ✨
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 1 -->
+
+            <div class="memory-media">
+
+                <video
+                    muted
+                    playsinline>
+
+                    <source
+                        src="hm_v5.mp4"
+                        type="video/mp4">
+
+                </video>
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 03
+                    </small>
+
+                    <h2>
+                        A moment I'll never forget 🎥
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="memory-media">
+
+                <img
+                    src="hm3.jpeg"
+                    alt="Just us">
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 04
+                    </small>
+
+                    <h2>
+                        Just us 💕
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="memory-media">
+
+                <img
+                    src="hm4.jpeg"
+                    alt="Beautiful memory">
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 05
+                    </small>
+
+                    <h2>
+                        A memory I'll always keep ❤️
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <!-- PHOTO 5 -->
+
+            <div class="memory-media">
+
+                <img
+                    src="photo5.jpg"
+                    alt="Beautiful memory">
+
+                <div class="memory-caption">
+
+                    <small>
+                        MEMORY 05
+                    </small>
+
+                    <h2>
+                        A memory  ❤️❤️❤️❤️❤️
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 NAVIGATION
+            ========================== -->
+
+            <button
+                class="memory-prev"
+                onclick="previousMemory()">
+
+                ‹
+
+            </button>
+
+
+            <button
+                class="memory-next"
+                onclick="nextMemory()">
+
+                ›
+
+            </button>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="memory-progress">
+
+                <span id="memoryNumber">
+                    01
+                </span>
+
+                <div class="progress-line">
+
+                    <div
+                        id="progressBar">
+                    </div>
+
+                </div>
+
+                <span>
+                    05
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+    <script src="gallery.js"></script>
+
+
+</body>
+
+</html>

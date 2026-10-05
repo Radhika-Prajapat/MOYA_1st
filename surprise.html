@@ -1,0 +1,151 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Final Surprise 🎁</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="surprise.css">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="birthday.mpeg" type="audio/mpeg">
+    </audio>
+
+
+    <!-- Music Player -->
+    <div class="music-player">
+
+        <div class="sparkContainer" id="sparkContainer"></div>
+
+        <button class="music-btn"
+                onclick="toggleMusic()"
+                id="musicButton">
+            ▶️
+        </button>
+
+        <div class="music-info">
+            <span id="musicStatus">Music Off</span>
+            <small>For Horrible ❤️</small>
+        </div>
+
+        <div class="music-bars" id="musicBars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- Fireworks -->
+    <div id="fireworks"></div>
+
+
+    <!-- Main Page -->
+    <div class="surprise-page">
+
+        <a href="home.html" class="back">
+            ← Back
+        </a>
+
+
+        <h1>One Last Surprise 🎁</h1>
+
+        <p class="intro-text">
+            Horrible... there's still something
+            waiting for you. ❤️
+        </p>
+
+
+        <!-- GIFT -->
+        <div class="gift-area" id="giftArea">
+
+            <div
+                class="gift"
+                onclick="openGift()"
+                id="gift"
+            >
+                🎁
+            </div>
+
+            <p class="click-text" id="clickText">
+                Tap the gift ❤️
+            </p>
+
+        </div>
+
+
+        <!-- SURPRISE BOX -->
+        <div id="surpriseBox" class="surprise-box">
+
+            <div class="surprise-number" id="surpriseNumber">
+                Surprise 01
+            </div>
+
+            <div id="surpriseContent">
+            </div>
+
+            <div class="surprise-timer">
+                <span id="timer">08</span>
+            </div>
+
+        </div>
+
+
+        <!-- Final Message -->
+        <div id="finalMessage" class="final-message">
+
+            <h2>Horrible ❤️</h2>
+
+            <p>
+                If you've reached this page,
+                then you've officially reached
+                the end of my little surprise.
+            </p>
+
+            <p>
+                But honestly...
+                I hope this isn't the end of
+                all the memories we still have
+                to make.
+            </p>
+
+            <p>
+                May your smile always stay this beautiful,
+                and may this year bring you everything
+                your heart wishes for. ✨
+            </p>
+
+            <h2>
+                Happy Birthday ❤️
+            </h2>
+
+            <h3>
+                — Moya
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- New Surprise JS -->
+    <script src="surprise.js"></script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="hearts-container"></div>
+
+    <!-- MUSIC -->
+
+    <audio id="bgMusic" loop>
+        <source src="birthday.mpeg" type="audio/mpeg">
+    </audio>
+
+    <div class="music-player">
+        <div class="sparkContainer" id="sparkContainer"></div>
+    <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+        ▶️
+    </button>
+
+    <div class="music-info">
+        <span id="musicStatus">Music Off</span>
+        <small>For Horrible ❤️</small>
+    </div>
+
+    <div class="music-bars" id="musicBars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+
+<!-- Home content -->
+    <main class="home">
+
+        <p class="welcome">
+            ✨ A little surprise from MOYA ❤️✨
+        </p>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>Horrible</h2>
+        <h3>❤️</h3>
+
+        <p id="typing"></p>
+
+
+        
+
+        <!-- NAVIGATION -->
+
+        <div class="menu">
+
+            <a href="story.html" >
+                <div>📖</div>
+                Our Story
+            </a>
+
+            <a href="message.html" >
+                <div>💌</div>
+                A Message For You
+            </a>
+
+            <a href="gallery.html" >
+                <div>📸</div>
+                Our Memories
+            </a>
+
+            <a href="surprise.html" >
+                <div>🎁</div>
+                Final Surprise
+            </a>
+
+        </div>
+        
+
+
+    </main>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

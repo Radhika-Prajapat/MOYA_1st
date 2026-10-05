@@ -1,0 +1,1102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Georgia, serif;
+
+    color: #fff;
+
+    background:
+        radial-gradient(circle at top,
+        #46235c,
+        #160d25 60%,
+        #08040d);
+
+}
+
+
+/* PASSWORD */
+
+.password-body {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+.password-box {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.09);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+
+}
+
+
+.big-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.password-box h1 {
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.password-box p {
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+}
+
+
+.hint {
+
+    font-size: 14px;
+
+    opacity: .7;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    margin: 15px 0;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 16px;
+
+}
+
+
+button {
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    color: white;
+
+    background: #d85b98;
+
+    transition: .3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.07);
+
+}
+
+
+#error {
+
+    color: #ff8fae;
+
+}
+
+
+.signature {
+
+    margin-top: 25px;
+
+    font-style: italic;
+
+}
+
+
+/* HOME */
+
+.home {
+
+    min-height: 100vh;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.welcome {
+
+    letter-spacing: 2px;
+
+    opacity: .8;
+
+}
+
+
+.home h1 {
+
+    font-size: 60px;
+
+    margin-top: 25px;
+
+}
+
+
+.home h2 {
+
+    font-size: 50px;
+
+    margin: 10px;
+
+}
+
+
+#typing {
+
+    min-height: 30px;
+
+    margin: 20px auto;
+
+    font-size: 19px;
+
+    opacity: .9;
+
+}
+
+
+/* MUSIC BUTTON */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 10;
+
+    font-size: 13px;
+
+    padding: 10px 15px;
+
+}
+
+
+/* COUNTDOWN */
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 35px auto;
+
+}
+
+
+.countdown div {
+
+    min-width: 75px;
+
+    padding: 15px 8px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.1);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+}
+
+
+.countdown span {
+
+    display: block;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+}
+
+
+.countdown small {
+
+    opacity: .7;
+
+}
+
+
+/* MENU */
+
+.menu {
+
+    max-width: 700px;
+
+    margin: 45px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+
+}
+
+
+.menu a {
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: .4s;
+
+}
+
+
+.menu a:hover {
+
+    transform: translateY(-8px);
+
+    background: rgba(255,255,255,.15);
+
+}
+
+
+.menu a div {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* PAGES */
+
+.page,
+.surprise-page {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+}
+
+
+.back {
+
+    color: white;
+
+    text-decoration: none;
+
+    opacity: .8;
+
+}
+
+
+.page h1,
+.surprise-page h1 {
+
+    font-size: 45px;
+
+    margin: 40px 0 10px;
+
+}
+
+
+.subtitle {
+
+    opacity: .7;
+
+}
+
+
+.letter {
+
+    margin-top: 35px;
+
+    padding: 40px;
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+}
+
+
+.letter h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter p {
+
+    margin-bottom: 20px;
+
+}
+
+
+.letter-end {
+
+    margin-top: 30px;
+
+    text-align: right;
+
+    font-style: italic;
+
+}
+
+
+/* GALLERY */
+
+.gallery {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+
+}
+
+
+.photo {
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.08);
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+.photo p {
+
+    margin: 12px;
+
+}
+
+
+/* GIFT */
+
+.surprise-page {
+
+    padding-top: 80px;
+
+}
+
+
+.gift {
+
+    font-size: 130px;
+
+    margin: 40px;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    animation: giftFloat 2s infinite;
+
+}
+
+
+.gift:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+@keyframes giftFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+.click-text {
+
+    opacity: .7;
+
+}
+
+
+.final-message {
+
+    display: none;
+
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.1);
+
+    animation: appear 1s ease;
+
+}
+
+
+.final-message h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.final-message p {
+
+    line-height: 1.8;
+
+    margin: 18px 0;
+
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* FLOATING HEARTS */
+
+#hearts-container span {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    animation: heartFloat 5s linear forwards;
+
+    z-index: 5;
+
+}
+
+
+@keyframes heartFloat {
+
+    from {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform: translateY(-110vh);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home h2 {
+        font-size: 36px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        gap: 6px;
+    }
+
+    .countdown div {
+        min-width: 65px;
+    }
+
+    .countdown span {
+        font-size: 21px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .page h1,
+    .surprise-page h1 {
+        font-size: 35px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    .gift {
+        font-size: 100px;
+    }
+
+}
+/* 🎵 MUSIC PLAYER */
+
+.music-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 14px 8px 8px;
+
+    border-radius: 40px;
+
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.music-btn {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.music-info {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+}
+
+.music-info span {
+    font-size: 13px;
+}
+
+.music-info small {
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+
+/* MUSIC BARS */
+
+.music-bars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    height: 30px;
+}
+
+.music-bars span {
+    width: 3px;
+    height: 8px;
+
+    border-radius: 5px;
+
+    background: white;
+}
+
+
+/* Jab music play ho */
+
+.music-bars.playing span:nth-child(1) {
+    animation: musicBar .5s infinite alternate;
+}
+
+.music-bars.playing span:nth-child(2) {
+    animation: musicBar .7s infinite alternate;
+}
+
+.music-bars.playing span:nth-child(3) {
+    animation: musicBar .4s infinite alternate;
+}
+
+.music-bars.playing span:nth-child(4) {
+    animation: musicBar .6s infinite alternate;
+}
+
+@keyframes musicBar {
+
+    from {
+        height: 5px;
+    }
+
+    to {
+        height: 25px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    .music-player {
+        top: 12px;
+        right: 12px;
+    }
+
+    .music-info {
+        display: none;
+    }
+
+}
+/* ✨ MUSIC SPARKS */
+
+.music-player {
+    position: fixed;
+    overflow: visible;
+}
+
+.sparkContainer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.spark {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgb(249, 249, 2);
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px #ffd6f5;
+
+    animation: sparkFly 1.4s ease-out forwards;
+}
+
+@keyframes sparkFly {
+
+    0% {
+        transform: translate(0, 0) scale(1.3);
+        opacity: 1;
+    }
+    60%{
+        opacity:1;
+    }
+
+    100% {
+        transform:
+            translate(
+                calc((var(--x) - 0.5) * 350px),
+                calc((var(--y) - 0.5) * 350px)
+            )
+            scale(0);
+
+        opacity: 0;
+    }
+}
+/* =========================
+   PAGE FRAME
+========================= */
+
+#pageFrame {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    display: block;
+    margin-top: 20px;
+}
+
+/* =========================
+   ROMANTIC DIARY
+========================= */
+
+.diary-book {
+    width: min(900px, 92%);
+    min-height: 520px;
+    margin: 35px auto;
+    display: flex;
+    position: relative;
+    perspective: 1200px;
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.18));
+}
+
+
+/* LEFT & RIGHT PAGES */
+
+.diary-left,
+.diary-right {
+    width: 50%;
+    min-height: 520px;
+    position: relative;
+}
+
+
+.diary-paper {
+    height: 100%;
+    min-height: 520px;
+    padding: 45px 45px 40px;
+    box-sizing: border-box;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 31px,
+            rgba(180, 120, 150, 0.18) 32px
+        ),
+        #fff9f3;
+
+    position: relative;
+}
+
+
+/* LEFT PAGE */
+
+.diary-left .diary-paper {
+    border-radius: 12px 0 0 12px;
+
+    transform: rotateY(3deg);
+
+    box-shadow:
+        inset -12px 0 18px rgba(0,0,0,0.08),
+        -5px 8px 15px rgba(0,0,0,0.08);
+}
+
+
+/* RIGHT PAGE */
+
+.diary-right .diary-paper {
+    border-radius: 0 12px 12px 0;
+
+    transform: rotateY(-3deg);
+
+    box-shadow:
+        inset 12px 0 18px rgba(0,0,0,0.08),
+        5px 8px 15px rgba(0,0,0,0.08);
+}
+
+
+/* BOOK CENTER */
+
+.diary-book::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 12px;
+    bottom: 12px;
+
+    width: 4px;
+
+    transform: translateX(-50%);
+
+    background: rgba(150, 100, 120, 0.28);
+
+    border-radius: 50%;
+}
+
+
+/* HOLES ON LEFT */
+
+.diary-holes {
+    position: absolute;
+
+    left: 12px;
+    top: 55px;
+
+    height: 410px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    z-index: 5;
+}
+
+
+.diary-holes span {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #ead6dc;
+
+    box-shadow:
+        inset 2px 2px 3px rgba(0,0,0,0.15);
+}
+
+
+/* DATE */
+
+.date {
+    font-family: cursive;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.75;
+}
+
+
+/* LEFT PAGE TEXT */
+
+.diary-small {
+    font-family: cursive;
+
+    font-size: 22px;
+
+    line-height: 32px;
+
+    margin-top: 45px;
+}
+
+
+/* EDITABLE STORY */
+
+.story-editor {
+    min-height: 380px;
+
+    outline: none;
+
+    color: #171717;
+
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+
+    font-size: 20px;
+
+    line-height: 32px;
+
+    letter-spacing: 0.3px;
+
+    cursor: text;
+
+    white-space: pre-wrap;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .diary-book {
+        width: 94%;
+        min-height: 450px;
+    }
+
+    .diary-left {
+        display: none;
+    }
+
+    .diary-right {
+        width: 100%;
+    }
+
+    .diary-right .diary-paper {
+        border-radius: 12px;
+        transform: none;
+    }
+
+    .diary-book::after {
+        display: none;
+    }
+
+}
+.diary-book h2,
+.diary-book .date {
+    color: #171717;
+
+    font-family:
+        "Segoe Print",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+
+    font-weight: 1500;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+/* =========================
+   FIXED DIARY SIZE
+========================= */
+
+.diary-book {
+    width: 900px;
+    height: 520px;
+
+    max-width: 95vw;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+.left-text,
+.right-text {
+    height: 300px;
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    line-height: 28px;
+
+    font-size: 16px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    color: rgb(97, 95, 95);
+
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 27px,
+        rgba(100, 100, 100, 0.2) 28px
+    );
+}
+
