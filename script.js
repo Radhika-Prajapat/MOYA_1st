@@ -1,5 +1,60 @@
+/* =========================
+   PASSWORD
+========================= */
+
+// function checkPassword() {
+
+//     const input =
+//         document.getElementById("password");
+
+//     if (!input) return;
+
+//     const password = input.value;
+
+//     // APNA PASSWORD YAHAN CHANGE KARO
+//     const correctPassword = "horrible";
+
+//     if (password === correctPassword) {
+
+//         try {
+//             localStorage.setItem("moyaMusicEnabled", "true");
+//         } catch (error) {
+//             // Ignore storage issues silently.
+//         }
+
+//         window.location.href = "home.html";
+
+//     } else {
+
+//         document.getElementById("error").innerText =
+//             "Wrong password 😜 Try again ❤️";
+
+//     }
+
+// }
 
 
+// /* ENTER KEY */
+
+// const passwordInput =
+//     document.getElementById("password");
+
+// if (passwordInput) {
+
+//     passwordInput.addEventListener(
+//         "keypress",
+//         function(event) {
+
+//             if (event.key === "Enter") {
+
+//                 checkPassword();
+
+//             }
+
+//         }
+//     );
+
+// }
 
 /* =========================
    MUSIC

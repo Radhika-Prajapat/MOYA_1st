@@ -5,8 +5,9 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cors()); // Frontend se request accept karne ke liye
+app.use(express.static(__dirname)); // Static files serve karne ke liye
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Login Route jahan password check hoga
 app.post('/api/login', (req, res) => {

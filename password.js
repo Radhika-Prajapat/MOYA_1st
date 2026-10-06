@@ -8,7 +8,7 @@ document.getElementById('loginButton').addEventListener('click', async () => {
 
     try {
         // Backend server ko request bhej rahe hain
-        const response = await fetch('http://localhost:3000/api/login', {
+        const response = await fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ async function checkPassword() {
 
     try {
         // Backend server ko request bhej rahe hain
-        const response = await fetch('http://localhost:3000/api/login', {
+        const response = await fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,8 +51,8 @@ async function checkPassword() {
 
         if (data.success) {
             alert("Login Successful! 🎉");
-            errorElement.style.color = "green";
-            errorElement.innerText = "Success!";
+        //     errorElement.style.color = "green";
+        //     errorElement.innerText = "Success!";
 
             try {
             localStorage.setItem("moyaMusicEnabled", "true");
